@@ -1,32 +1,18 @@
-
 $(document).ready(function(){
-	
-	/* $('#start-page').delay('3000').fadeIn('slow');*/
-	
-	
+	//Efeitos de abertura do site
+$('.first-page').fadeIn(2000).delay(3000).fadeOut(2500);
+ $('.logotitle').fadeIn(2000).delay(3000).fadeOut(2500);
+ 
 	// Carregar Imagens Logo no inicio
     $(restaurantes).each(function (chave, valor) {
-      
-		/*var nomeRestaurante = [];
-   nomeRestaurante.push("<span>" + valor.name + "</span>");
-   $("#restaurant-shower").append(nomeRestaurante[0]);*/
 		$('<img>').attr('src', valor.image).attr('id', valor.name).appendTo('#restaurant-shower');
 	});// FIM Carregar imagem
-	
-	
-	// testando infos de cada imagem
-	/*$("#restaurant-shower").click(function(chave, valor){
-		$(restaurantes).each(function (chave, valor) {
-			if (valor.image === )
-	alert ("eitaaa" + valor.image);
-	});
-	});*/ // final da funcao clicar na imagem inicial
-	
+
 	//Funcao de clique no buscar
 $("#btnOrder").click(function(){
 	var	foodorder = $("#order").val();
 	var resultRestaurants = [];
-	
+
 	//funcão limpar #restaurant-shower
 	  $('#restaurant-shower').children().remove();
 	   
@@ -38,11 +24,8 @@ $("#btnOrder").click(function(){
    img.push("<img class='nomesRestaurantes' src ='" + valor.image + "'>");
    $("#restaurant-shower").append(img[0]);	
    
-
-   
+   //Funcao de clicar na imagem   
    $('img').click(function(chave, valor){
-	    
-	
 	var tituloRestaurante = [];
     tituloRestaurante.push("<p>" + restaurant.name + "</p>");
    $("#titulo").append(tituloRestaurante);  
@@ -59,12 +42,7 @@ $("#btnOrder").click(function(){
 	   console.log(restaurant.name);
 	  // alert(restaurant.description);
 	}
-	 
-    
    });
-
-	
-	
 	};
 		});
 	});
@@ -88,4 +66,21 @@ var map;
 		 icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
 		animation: google.maps.Animation.DROP
         });
+		
+		 // Função para carregar pins;
+  function loadingMarker () {
+
+    //percorre o data;
+    $.each(restaurantes, function (i, restaurant) {
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(restaurant.latitude, restaurant.longitude),
+        title: "Restaurantes",
+        map: map,
+      });
+      $('<img>').attr('src', restaurant.image).attr('id', restaurant.name).appendTo('#restaurant-shower');
+      
+      });
+      console.log(restaurant.latitude)
+  }
+ loadingMarker ();
 		};
