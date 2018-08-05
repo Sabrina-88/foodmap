@@ -1,1 +1,65 @@
-/*Add your CSS*/
+body {
+	font-family: 'Raleway', sans-serif;
+	color:#F5A40B;
+}
+
+	h4{
+		color:#fff;}
+.navbar a {
+		text-decoration:none;
+		 color:inherit;}
+	i {
+		color:#F5A40B;
+		font-size:14px;}
+		input{
+			text-transform:lowercase;}
+			
+			#map {
+	height: 250px;
+	width: 100%;
+			}
+			
+			.display-show{
+				display:flex;
+				flex-direction:row;
+				}
+			
+			#restaurant-shower span{
+				display:flex;
+				flex-direction:column;
+				
+				}
+	.logoRestaurant {
+	height:130px;
+	width:130px;
+	margin:10px;
+	border: 2px #C91111 solid;
+	}		
+	
+	#restaurant-shower img{
+		height:130px;
+	width:130px;
+	margin:10px;
+	border: 2px #C91111 solid;
+	border-radius: 8px;
+	}
+	#restaurant-shower img:hover {
+		opacity:0.5;
+	transform: scale(1.1);}
+			
+@media only screen and (max-width: 576px) {
+
+/*.logoRestaurant {
+	height:50px;
+	width:50px;
+	margin:5px;
+	border: 2px #C91111 solid;
+	}
+	
+#restaurant-shower img{
+		height:50px;
+	width:50px;
+	margin:5px;
+	border: 2px #C91111 solid;}*/
+	
+}
