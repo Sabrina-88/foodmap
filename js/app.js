@@ -1,57 +1,47 @@
 $(document).ready(function(){
+	
 	//Efeitos de abertura do site
-$('.first-page').fadeIn(2000).delay(3000).fadeOut(2500);
- $('.logotitle').fadeIn(2000).delay(3000).fadeOut(2500);
- 
+	$('.first-page').fadeIn(2000).delay(3000).fadeOut(2500);
+	 
 	// Carregar Imagens Logo no inicio
-    $(restaurantes).each(function (chave, valor) {
+   	$(restaurantes).each(function (chave, valor) {
 		$('<img>').attr('src', valor.image).attr('id', valor.name).appendTo('#restaurant-shower');
-	});// FIM Carregar imagem
-
-	//Funcao de clique no buscar
-$("#btnOrder").click(function(){
-	var	foodorder = $("#order").val();
-	var resultRestaurants = [];
-
-	//funcão limpar #restaurant-shower
-	  $('#restaurant-shower').children().remove();
-	   
-	   // funcao grep e filter
-	var approved = $.grep(restaurantes, function(restaurant) {
-	$(restaurant).filter(function (chave, valor) {
-		 if (valor.name === foodorder || valor.type === foodorder) { 
-	var img = [];
-   img.push("<img class='nomesRestaurantes' src ='" + valor.image + "'>");
-   $("#restaurant-shower").append(img[0]);	
-   
-   //Funcao de clicar na imagem   
-   $('img').click(function(chave, valor){
-	var tituloRestaurante = [];
-    tituloRestaurante.push("<p>" + restaurant.name + "</p>");
-   $("#titulo").append(tituloRestaurante);  
-   
-   var tituloRestaurante = [];
-    tituloRestaurante.push("<p>" + restaurant.description + "</p>");
-   $("#titulo").append(tituloRestaurante);
-   
-	if(restaurant === restaurant.image){
-		
-	   var clique = []
-	   clique.push(restaurant);
-	   console.log(restaurant);
-	   console.log(restaurant.name);
-	  // alert(restaurant.description);
-	}
-   });
-	};
-		});
 	});
-});//FIM clique
-    
 
+	//Função de clique no buscar
+	$("#btnOrder").click(function(){
+		var	foodorder = $("#order").val();
+		var resultRestaurants = [];
+
+	//Função limpar #restaurant-shower
+	  	$('#restaurant-shower').children().remove();
+	  
+	   //Função grep e filter
+		var approved = $.grep(restaurantes, function(restaurant) {
+			$(restaurant).filter(function (chave, valor) {
+				 if (valor.name === foodorder || valor.type === foodorder) { 
+					var img = [];
+   					img.push
+					$('<img>').attr('src', valor.image).attr('id', valor.name).appendTo('#restaurant-shower');
+   
+   
+   	//Função de clicar na imagem  
+   					$('img').click(function(chave, valor){
+	   //if($('img').attr('id') === restaurant.name){
+				  
+	var titleRestaurant = [];
+    titleRestaurant.push("<p>" + restaurant.name + "</p>");
+   $("#title").append(titleRestaurant);  
+   
+   var descriptionRestaurant = [];
+    descriptionRestaurant.push("<p>" + restaurant.description + "</p>");
+   $("#description").append(descriptionRestaurant);
+   });
+	}
+});
+	});
+});
 });// Fim da ready
-
-
 
 var map;
     function initMap() {
@@ -60,12 +50,12 @@ var map;
          zoom: 15
 		});
 		var marker = new google.maps.Marker({
-          position: {lat: -23.5489, lng: -46.6388},
+          position: (restaurant.latitude, restaurant.longitude),
           map: map,
-        
 		 icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
 		animation: google.maps.Animation.DROP
         });
+		 initMap();
 		
 		 // Função para carregar pins;
   function loadingMarker () {
@@ -78,9 +68,8 @@ var map;
         map: map,
       });
       $('<img>').attr('src', restaurant.image).attr('id', restaurant.name).appendTo('#restaurant-shower');
-      
       });
-      console.log(restaurant.latitude)
+      
   }
  loadingMarker ();
 		};

@@ -4,7 +4,7 @@ body {
 }
 .first-page {
 	background-image: url("../assets/firstimage.jpg");
-	background-size: 100%;
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	align-items: center;
 	display: flex;
@@ -56,16 +56,10 @@ input {
 	display: flex;
 	flex-direction: column;
 }
-.logoRestaurant {
-	height: 130px;
-	width: 130px;
-	margin: 10px;
-	border: 2px #C91111 solid;
-}
 #restaurant-shower img {
-	height: 130px;
-	width: 130px;
-	margin: 10px;
+	height: 90px;
+	width: 90px;
+	margin: 5px;
 	border: 2px #C91111 solid;
 	border-radius: 8px;
 }
@@ -75,17 +69,5 @@ input {
 }
 
 @media only screen and (max-width: 576px) {
-/*.logoRestaurant {
-	height:50px;
-	width:50px;
-	margin:5px;
-	border: 2px #C91111 solid;
-	}
-	
-#restaurant-shower img{
-		height:50px;
-	width:50px;
-	margin:5px;
-	border: 2px #C91111 solid;}*/
 	
 }

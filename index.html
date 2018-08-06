@@ -22,57 +22,45 @@
       <h4><a class="navbar-brand font-weight-bold" href="index.html">FoodMap <span id="logomoto"><i class="fa fa-motorcycle"></i></span></a></h4>
     </div>
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i> </button>
-    
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav text-light">
         <li class="active"><a href="#">Login <span class="sr-only">(current)</span></a></li>
         <li><a href="#"></a></li>
       </ul>
     </div>
-    <!-- /.navbar-collapse --> 
   </div>
-  <!-- /.container-fluid --> 
 </nav>
 <div class="input-group">
   <div class=" col-12 mt-5">
     <label for="toorder" class=" text-center h3 font-weight-bold">O que você está com vontade de comer?</label>
   </div>
   <div class=" col-12 mt-3 mb-3">
-    <input type="text" id="order" class="col-10" name="inputpedido" placeholder="Digite o nome do restaurante ou o tipo de comida"/>
+    <input type="text" id="order" class="col-8" name="inputpedido" onfocus="this.value=''" placeholder="Digite o nome do restaurante ou tipo de comida"/>
     <button  id="btnOrder" >Buscar</button>
   </div>
 </div>
 <div class="col-12 text-center mt-2 mb-2">
   <div id="map" class="img-fluid"></div>
 </div>
-<!--<label for="toorder">O que você esta com vontade de comer?</label>
-<input type="text" id="order" name="inputpedido" placeholder="Digite o nome do restaurante ou o tipo de comida"/>
-<button  id="btnOrder" >Buscar</button> -->
 <div class="display container-fluid text-center">
-  <div class=" col-12">
-    <div class="display-show col">
-      <div id="restaurant-shower" class="" data-toggle="modal" data-target="#modalCondutor"></div>
-    </div>
-  </div>
+  <div id="restaurant-shower"  class="" data-toggle="modal" data-target="#modalCondutor"></div>
 </div>
+<footer class="container-fluid bg-warning text-light" >FoodMap <span id="logomoto"><i class="fa fa-motorcycle"></i></span></footer>
 
 <!--Modal-->
-
 <div class="modal fade" id="modalCondutor" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title text-dark font-weight-bold" id="titulo" > </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+        <h6 class="modal-title text-dark font-weight-bold" id="title" > </h6>
+        <button type="button" onfocus="this.value=''" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
       </div>
-      <div class="modal-body"> 
-        <!-- <div id="map" class="img-fluid"></div>-->
-        
-        <h3  class="font-weight-bold" id="description"></h3>
+      <div class="modal-body">
+        <div id="map" class="img-fluid"></div>
+        <h3  class="font-weight-bold text-dark " id="description"></h3>
       </div>
       <div class="modal-footer justify-content-center">
-        <button type="button" class="btn btn-warning font-weight-bold text-light col-4" data-dismiss="modal">Fazer pedido!</button>
+        <button type="button" class="btn btn-warning font-weight-bold text-light col-4" data-dismiss="modal">Fazer pedido! </button>
       </div>
     </div>
   </div>
