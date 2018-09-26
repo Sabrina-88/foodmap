@@ -36,6 +36,8 @@ $(document).ready(function(){
    var descriptionRestaurant = [];
     descriptionRestaurant.push("<p>" + restaurant.description + "</p>");
    $("#description").append(descriptionRestaurant);
+						//Função limpar #restaurant-shower
+	  	$('#description').children().remove();
    });
 	}
 });
