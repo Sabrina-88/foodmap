@@ -1,5 +1,5 @@
 # Foodmap
-
+![foodmap](https://user-images.githubusercontent.com/27375075/47251766-d8661700-d40e-11e8-95bc-63307eabcff9.PNG)
 ## Motivation
 Laboratoria´s Development Course Project - Create a web-app that through an input it is possible to filter the restaurants that are close to you and display them on the map.
 
